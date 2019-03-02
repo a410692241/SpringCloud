@@ -1,0 +1,16 @@
+  server:
+    port: 8081
+  eureka:
+    client:
+      service-url:
+        defaultZone: http://localhost:8080/eureka/ #注册中心地址
+      fetch-registry: false #是否拉取服务列表，这里我只提供服务给别的服务。
+      register-with-eureka: false #是否开启注册服务，因为这里如果为true表示自己注册自己，而自己就是一个服务注册方，没必要自己注册自己
+    server:
+      enable-self-preservation: false #eureka自我保护机制
+      renewal-percent-threshold: 0.5
+  instence: #Eureka实例名,业务服务集群中根据这里相互识别
+    hostname: eureka2 #定义euraka示例的名称
+  spring:
+    application:
+      name: eureka2

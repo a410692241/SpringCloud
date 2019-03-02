@@ -1,0 +1,20 @@
+server:
+  port: 8091
+spring:
+  application:
+    name: server_provider #服务名称
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/wherebuy?serverTimezone=GMT
+    username: root
+    password: root
+    mybatis:
+      mapper-locations: classpath:com/wei/euraka/mapper/*.xml
+      type-aliases-package: classpath:com.wei.euraka.bo
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:8080/eureka/ #服务注册的地址
+  instance:
+    instance-id: provider_8091
+    ip-address: true
