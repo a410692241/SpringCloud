@@ -6,15 +6,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/providerController")
 public class ProviderController {
     @Value("${server.port}")
     private String port;
-    @RequestMapping("/provider/{params}")
-    public String provider(@PathVariable("params") String params){
+
+    @RequestMapping("/getAll")
+    public String provider(){
+        System.out.println("成功调用provider,端口是:" + port);
         return "成功调用provider,端口是:" + port;
     }
 
+    @RequestMapping("/getAll2")
+    public String provider2(){
+        return "成功调用provider,端口是:" + port;
+    }
 
 
 

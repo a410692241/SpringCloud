@@ -5,9 +5,8 @@
     <modules>
         <module>euraka-regist</module>
         <module>provider</module>
-        <module>provider2</module>
+        <module>ribbon</module>
         <module>eureka-regist2</module>
-        <module>consumer</module>
         <module>service</module>
     </modules>
     <parent>

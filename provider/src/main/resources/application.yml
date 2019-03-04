@@ -2,7 +2,7 @@ server:
   port: 8090
 spring:
   application:
-    name: server_provider #服务名称
+    name: server-provider
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/wherebuy?serverTimezone=GMT
@@ -15,6 +15,3 @@ eureka:
   client:
     service-url:
       defaultZone:  http://localhost:8080/eureka/ #服务注册的地址
-  instance:
-    instance-id: provider2_8090
-    ip-address: true
