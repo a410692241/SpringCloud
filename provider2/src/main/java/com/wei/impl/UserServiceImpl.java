@@ -41,7 +41,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> selectByExample(UserExample example) {
-        System.out.println("访问的是1++++++++++");
+        System.out.println("访问的是2++++++++++");
         return userDao.selectByExample(example);
     }
 

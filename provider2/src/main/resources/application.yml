@@ -1,5 +1,9 @@
 server:
-  port: 8090
+  port: 8091
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
 spring:
   application:
     name: server-provider
@@ -13,9 +17,3 @@ mybatis:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath:com/wei/mapper/*.xml
   type-aliases-package: classpath:com.wei.bo
-eureka:
-  client:
-    service-url:
-      defaultZone:  http://localhost:8080/eureka/ #服务注册的地址
-  instance:
-    prefer-ip-address: true

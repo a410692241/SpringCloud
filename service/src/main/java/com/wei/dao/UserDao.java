@@ -2,6 +2,7 @@ package com.wei.dao;
 
 import com.wei.bo.User;
 import com.wei.bo.UserExample;
+import org.jboss.logging.Param;
 
 import java.util.List;
 
@@ -20,9 +21,9 @@ public interface UserDao {
 
     User selectByPrimaryKey(Integer userId);
 
-    int updateByExampleSelective( User record,  UserExample example);
+    int updateByExampleSelective(User record, UserExample example);
 
-    int updateByExample( User record,  UserExample example);
+    int updateByExample(User record, UserExample example);
 
     int updateByPrimaryKeySelective(User record);
 

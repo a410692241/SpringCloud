@@ -78,8 +78,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    user_id, nickname, head_image, birthday, sex, mobile, qq, email, real_name, is_sharer, 
-    id_card_front, id_card_back, is_procurer, default_receive_address_id, create_time, 
+    user_id, nickname, head_image, birthday, sex, mobile, qq, email, real_name, is_sharer,
+    id_card_front, id_card_back, is_procurer, default_receive_address_id, create_time,
     update_time
   </sql>
   <select id="selectByExample" parameterType="com.wei.bo.UserExample" resultMap="BaseResultMap">
@@ -105,7 +105,7 @@
     </if>
   </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
+    select
     <include refid="Base_Column_List" />
     from user
     where user_id = #{userId,jdbcType=INTEGER}
@@ -121,15 +121,15 @@
     </if>
   </delete>
   <insert id="insert" keyColumn="user_id" keyProperty="userId" parameterType="com.wei.bo.User" useGeneratedKeys="true">
-    insert into user (nickname, head_image, birthday, 
-      sex, mobile, qq, email, 
-      real_name, is_sharer, id_card_front, 
-      id_card_back, is_procurer, default_receive_address_id, 
+    insert into user (nickname, head_image, birthday,
+      sex, mobile, qq, email,
+      real_name, is_sharer, id_card_front,
+      id_card_back, is_procurer, default_receive_address_id,
       create_time, update_time)
-    values (#{nickname,jdbcType=VARCHAR}, #{headImage,jdbcType=VARCHAR}, #{birthday,jdbcType=TIMESTAMP}, 
-      #{sex,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR}, #{qq,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
-      #{realName,jdbcType=VARCHAR}, #{isSharer,jdbcType=VARCHAR}, #{idCardFront,jdbcType=VARCHAR}, 
-      #{idCardBack,jdbcType=VARCHAR}, #{isProcurer,jdbcType=VARCHAR}, #{defaultReceiveAddressId,jdbcType=INTEGER}, 
+    values (#{nickname,jdbcType=VARCHAR}, #{headImage,jdbcType=VARCHAR}, #{birthday,jdbcType=TIMESTAMP},
+      #{sex,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR}, #{qq,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR},
+      #{realName,jdbcType=VARCHAR}, #{isSharer,jdbcType=VARCHAR}, #{idCardFront,jdbcType=VARCHAR},
+      #{idCardBack,jdbcType=VARCHAR}, #{isProcurer,jdbcType=VARCHAR}, #{defaultReceiveAddressId,jdbcType=INTEGER},
       #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" keyColumn="user_id" keyProperty="userId" parameterType="com.wei.bo.User" useGeneratedKeys="true">
@@ -294,21 +294,21 @@
   <update id="updateByExample" parameterType="map">
     update user
     set user_id = #{record.userId,jdbcType=INTEGER},
-      nickname = #{record.nickname,jdbcType=VARCHAR},
-      head_image = #{record.headImage,jdbcType=VARCHAR},
-      birthday = #{record.birthday,jdbcType=TIMESTAMP},
-      sex = #{record.sex,jdbcType=VARCHAR},
-      mobile = #{record.mobile,jdbcType=VARCHAR},
-      qq = #{record.qq,jdbcType=VARCHAR},
-      email = #{record.email,jdbcType=VARCHAR},
-      real_name = #{record.realName,jdbcType=VARCHAR},
-      is_sharer = #{record.isSharer,jdbcType=VARCHAR},
-      id_card_front = #{record.idCardFront,jdbcType=VARCHAR},
-      id_card_back = #{record.idCardBack,jdbcType=VARCHAR},
-      is_procurer = #{record.isProcurer,jdbcType=VARCHAR},
-      default_receive_address_id = #{record.defaultReceiveAddressId,jdbcType=INTEGER},
-      create_time = #{record.createTime,jdbcType=TIMESTAMP},
-      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
+    nickname = #{record.nickname,jdbcType=VARCHAR},
+    head_image = #{record.headImage,jdbcType=VARCHAR},
+    birthday = #{record.birthday,jdbcType=TIMESTAMP},
+    sex = #{record.sex,jdbcType=VARCHAR},
+    mobile = #{record.mobile,jdbcType=VARCHAR},
+    qq = #{record.qq,jdbcType=VARCHAR},
+    email = #{record.email,jdbcType=VARCHAR},
+    real_name = #{record.realName,jdbcType=VARCHAR},
+    is_sharer = #{record.isSharer,jdbcType=VARCHAR},
+    id_card_front = #{record.idCardFront,jdbcType=VARCHAR},
+    id_card_back = #{record.idCardBack,jdbcType=VARCHAR},
+    is_procurer = #{record.isProcurer,jdbcType=VARCHAR},
+    default_receive_address_id = #{record.defaultReceiveAddressId,jdbcType=INTEGER},
+    create_time = #{record.createTime,jdbcType=TIMESTAMP},
+    update_time = #{record.updateTime,jdbcType=TIMESTAMP}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
