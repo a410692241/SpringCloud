@@ -4,10 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>euraka-regist</module>
-        <module>provider</module>
-        <module>ribbon</module>
         <module>eureka-regist2</module>
+        <module>provider</module>
+        <module>provider2</module>
+        <module>ribbon</module>
+        <module>feign</module>
+        <module>config</module>
         <module>service</module>
+        <module>hystrix</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -88,5 +92,4 @@
             <url>https://repo.spring.io/milestone</url>
         </repository>
     </repositories>
-
 </project>

@@ -12,3 +12,9 @@ spring:
 server-provider:
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+logging:
+  level:
+    com:
+      wei:
+        controller:
+          FeignService: debug

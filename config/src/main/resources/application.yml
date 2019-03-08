@@ -1,20 +1,10 @@
 server:
-  port: 8062
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8080/eureka/
+  port: 10086
 spring:
-  application:
-    name: config
-
----
-server:
-     port: 8063
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8080/eureka/
-spring:
-  application:
-    name: config8063
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/a410692241/CloudConfig.git
+          #username:
+          #password:
