@@ -6,6 +6,7 @@ import org.jboss.logging.Param;
 
 import java.util.List;
 
+
 public interface UserDao {
     long countByExample(UserExample example);
 
