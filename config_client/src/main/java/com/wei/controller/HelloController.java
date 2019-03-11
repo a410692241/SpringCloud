@@ -5,14 +5,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class HelloController {
+class HelloController {
 
     @Value("${spring.application.name}")
-    private String name;
+    private String hello;
 
     @RequestMapping("/hello")
-    public String hello() {
-        System.out.println(name);
-        return name;
+    public String from() {
+        return this.hello;
     }
 }
