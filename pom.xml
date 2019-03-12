@@ -12,6 +12,8 @@
         <module>zuul</module>
         <module>service</module>
         <module>hystrix</module>
+        <module>config_client</module>
+        <module>config_server</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
