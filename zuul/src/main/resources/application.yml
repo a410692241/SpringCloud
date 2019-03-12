@@ -1,0 +1,18 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: Zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+zuul:
+  routes:
+    test1:
+      #匹配规则,如果发送的url前缀是test1,那么就转到service-provider微服务上
+      path: /test1/**
+      serviceId: server-provider
+    test2:
+      path: /test2/**
+      serviceId: ribbon-consumer

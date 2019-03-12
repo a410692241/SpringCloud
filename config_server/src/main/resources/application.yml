@@ -10,3 +10,7 @@ spring:
           uri: https://github.com/a410692241/CloudConfig.git     # ÅäÖÃgit²Ö¿âµÄµØÖ·
           username:                                              # git²Ö¿âµÄÕËºÅ
           password:                                              # git²Ö¿âµÄÃÜÂë
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
